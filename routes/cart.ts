@@ -2,7 +2,11 @@ import { Router } from "express";
 
 import { getCart, addToCart, removeFromCart } from "../controllers/cart";
 
+import { verifyToken } from "../middlewares/auth";
+
 const router = Router();
+
+router.use(verifyToken);
 
 router.get("/:userId", getCart);
 
