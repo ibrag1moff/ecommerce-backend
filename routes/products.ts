@@ -3,6 +3,7 @@ import { Router } from "express";
 import {
   addProducts,
   deleteProducts,
+  getPopularProducts,
   getProducts,
   toggleIsPopular,
   updateProducts,
@@ -13,6 +14,8 @@ import { isAdmin, verifyToken } from "../middlewares/auth";
 const router = Router();
 
 router.get("/", getProducts);
+
+router.get("/popular", getPopularProducts);
 
 router.post("/add", verifyToken, isAdmin, addProducts);
 

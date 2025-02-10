@@ -20,7 +20,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.10.0",
     "node-cron": "^3.0.3",
-    "nodemailer": "^6.10.0"
+    "nodemailer": "^6.10.0",
+    "railway": "^2.0.17"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",

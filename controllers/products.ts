@@ -23,6 +23,25 @@ export const getProducts: (req: Request, res: Response) => void = async (
   }
 };
 
+export const getPopularProducts: (req: Request, res: Response) => void = async (
+  req: Request,
+  res: Response
+) => {
+  try {
+    const products = await Product.find({ isPopular: true });
+
+    if (!products.length)
+      return res
+        .status(404)
+        .json({ success: false, message: "Popular products not found" });
+
+    res.status(200).json({ success: true, products });
+  } catch (e: any) {
+    console.error(e);
+    res.status(500).json({ success: false, message: e.message });
+  }
+};
+
 export const addProducts: (
   req: Request<{}, {}, AddProductRequest>,
   res: Response
