@@ -31,7 +31,7 @@ This is the backend service for an eCommerce application, built using Node.js, T
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/ecommerce-backend.git
+   git clone https://github.com/ibrag1moff/ecommerce-backend.git
    cd ecommerce-backend
    ```
 2. Install dependencies:
