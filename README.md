@@ -7,7 +7,7 @@ This is the backend service for an eCommerce application, built using Node.js, T
 - Admin role with product management capabilities
 - CRUD operations for products and orders
 - Shopping cart functionality
-- Payment integration (e.g., Stripe, PayPal)
+- Payment integration 
 - Secure API endpoints
 - Data validation with Mongoose schemas
 - Error handling and logging
