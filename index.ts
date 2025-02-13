@@ -3,6 +3,7 @@ import type { Express, Request, Response } from "express";
 
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 
 import { connectDB } from "./db";
 
@@ -23,6 +24,7 @@ connectDB();
 // Middlewares
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors({ credentials: true, origin: process.env.CLIENT_URL }));
 
 // Routes
 app.use("/auth", authRouter);
