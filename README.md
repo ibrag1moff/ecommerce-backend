@@ -56,7 +56,7 @@ This is the backend service for an eCommerce application, built using Node.js, T
 - `POST /auth/login` - Login and receive a JWT
 - `POST /auth/forgot-password` - Request a password reset link
 - `POST /auth/reset-password` - Reset password with a valid token
-- `POST /auth/delete` - Delete account
+- `DELETE /auth/delete` - Delete account
 
 ### Product Routes
 - `GET /products` - Get all products
