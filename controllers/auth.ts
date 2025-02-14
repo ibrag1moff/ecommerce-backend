@@ -265,7 +265,7 @@ export const deleteUser: (req: Request, res: Response) => void = async (
   req: Request,
   res: Response
 ) => {
-  const token = req.cookies.token;
+  const token = req.headers.authorization?.split(" ")[1];
   try {
     if (!token) {
       return res
@@ -297,7 +297,7 @@ export const getUser: (req: Request, res: Response) => void = async (
   req: Request,
   res: Response
 ) => {
-  const token = req.cookies.token;
+const token = req.headers.authorization?.split(" ")[1];
   try {
     if (!token) {
       return res
